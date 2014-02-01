@@ -1,0 +1,17 @@
+CREATE TABLE `accounts` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `username` varchar(255) NOT NULL,
+ `password` varchar(255) NOT NULL,
+ `ip` int(11) unsigned NOT NULL,
+ `datetime` datetime NOT NULL,
+ `email` varchar(255) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1
+
+CREATE TABLE `login_attempts` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `acc_id` int(11) NOT NULL,
+ `datetime` datetime NOT NULL,
+ `result` tinyint(1) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1
