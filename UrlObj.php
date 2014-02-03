@@ -6,8 +6,8 @@ class UrlObj
 
 	public function __construct($key = '', $data = '')
 	{
-		set_key($key);
-		set_data($data);
+		$this->set_key($key);
+		$this->set_data($data);
 	}
 
 	//Can easily use the magic __get and __set methods instead if code base requires it,
